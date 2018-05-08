@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>取消事件默认行为</title>
+</head>
+<body>
+  <a href="http://jingdong.com">baidu</a>
+<script>
+  document.querySelector('a').onclick=function(e){
+    e.preventDefault()
+    console.log(this.href)
+  if(/baidu.com/.test(this.href)){
+    location.href = this.href
+    }
+  }
+</script>
+</body>
+</html>
